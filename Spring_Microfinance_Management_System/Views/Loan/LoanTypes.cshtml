@@ -1,0 +1,143 @@
+﻿@model Spring_Microfinance_Management_System.Models.LoanCalculator
+<!-- ======= Header ======= -->
+<header id="header" class="header fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+        <a href="index.html" class="logo d-flex align-items-center">
+            <img src="assets/img/logo.png" alt="">
+            <span>FlexStart</span>
+        </a>
+
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+                <li><a class="nav-link scrollto" href="#about">About</a></li>
+                <li><a class="nav-link scrollto" href="#services">Services</a></li>
+                <li><a class="nav-link scrollto" href="#portfolio">Portfolio</a></li>
+                <li><a class="nav-link scrollto" href="#team">Team</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li class="dropdown">
+                    <a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="#">Drop Down 1</a></li>
+                        <li class="dropdown">
+                            <a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                            <ul>
+                                <li><a href="#">Deep Drop Down 1</a></li>
+                                <li><a href="#">Deep Drop Down 2</a></li>
+                                <li><a href="#">Deep Drop Down 3</a></li>
+                                <li><a href="#">Deep Drop Down 4</a></li>
+                                <li><a href="#">Deep Drop Down 5</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Drop Down 2</a></li>
+                        <li><a href="#">Drop Down 3</a></li>
+                        <li><a href="#">Drop Down 4</a></li>
+                    </ul>
+                </li>
+                <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+                <li><a class="getstarted scrollto" href="Apply">Apply Now</a></li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+
+    </div>
+</header><!-- End Header -->
+<!-- ======= Features Section ======= -->
+<section id="features" class="features">
+
+    <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+            <h2>Features</h2>
+            <p>Laboriosam et omnis fuga quis dolor direda fara</p>
+        </header>
+
+        <div class="row">
+
+            <div class="col-lg-6">
+                <img src="~/assets/img/features.png" class="img-fluid" alt="">
+            </div>
+
+            <div class="col-lg-6 mt-5 mt-lg-0 d-flex">
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="box">
+                        <div class="row align-self-center gy-4">
+
+                            <form class="form-inline" action="/LoanCalculator/LoanCalculator" method="post">
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.LoanAmount)
+                                    @Html.EditorFor(model => model.LoanAmount, new { htmlAttributes = new { @class = "form-control", @placeholder = "$" } })
+                                </div><br /><br />
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.InterestRate)
+                                    @Html.EditorFor(model => model.InterestRate, new { htmlAttributes = new { @class = "form-control", @placeholder = "%" } })
+                                </div><br /><br />
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.TermInMonths)
+                                    @Html.EditorFor(model => model.TermInMonths, new { htmlAttributes = new { @class = "form-control" } })
+                                </div><br /><br />
+
+                                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Calculate</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div> <!-- / row -->
+
+
+
+    </div>
+
+</section><!-- End Features Section -->
+<!-- ======= Values Section ======= -->
+<section id="values" class="values">
+
+    <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+            <h2>Our Values</h2>
+            <p>Odit est perspiciatis laborum et dicta</p>
+        </header>
+
+        <div class="row">
+
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="box">
+                    <img src="~/assets/img/values-1.png" class="img-fluid" alt="">
+                    <h3>Ad cupiditate sed est odio</h3>
+                    <p>Eum ad dolor et. Autem aut fugiat debitis voluptatem consequuntur sit. Et veritatis id.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="400">
+                <div class="box">
+                    <img src="~/assets/img/values-2.png" class="img-fluid" alt="">
+                    <h3>Voluptatem voluptatum alias</h3>
+                    <p>Repudiandae amet nihil natus in distinctio suscipit id. Doloremque ducimus ea sit non.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="600">
+                <div class="box">
+                    <img src="~/assets/img/values-3.png" class="img-fluid" alt="">
+                    <h3>Fugit cupiditate alias nobis.</h3>
+                    <p>Quam rem vitae est autem molestias explicabo debitis sint. Vero aliquid quidem commodi.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section><!-- End Values Section -->
+
+@if (ViewBag.MonthlyPayment != null)
+{
+    <h3>Monthly Payment: @ViewBag.MonthlyPayment.ToString("C")</h3>
+    <h3>Total Payment: @ViewBag.TotalPayment.ToString("C")</h3>
+}

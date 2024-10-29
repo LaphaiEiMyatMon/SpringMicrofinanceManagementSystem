@@ -1,0 +1,26 @@
+﻿@model Spring_Microfinance_Management_System.Models.TestPlan
+
+<table>
+    <thead>
+        <tr>
+            <th>Repayment Amount</th>
+            <th>Repayment Date</th>
+            <th>Principal Paid</th>
+            <th>Interest Paid</th>
+            <th>Remaining Balance</th>
+        </tr>
+    </thead>
+    <tbody>
+      
+        @foreach (var repayment in Model)
+        {
+            <tr>
+                <td>@repayment.RepaymentAmount</td>
+                <td>@repayment.RepaymentDate.ToShortDateString()</td>
+                <td>@repayment.PrincipalPaid</td>
+                <td>@repayment.InterestPaid</td>
+                <td>@repayment.RemainingBalance</td>
+            </tr>
+        }
+    </tbody>
+</table>

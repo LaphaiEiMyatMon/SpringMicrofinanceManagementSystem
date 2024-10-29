@@ -1,0 +1,103 @@
+﻿@model Spring_Microfinance_Management_System.Models.Customer
+
+
+@using (Html.BeginForm("AddRequireInfo", "Customer", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+
+    <div class="form-group col-md-4">
+        <label>Father Name</label>
+        @Html.TextBoxFor(m => m.FatherName, new { @class = "form-control", placeholder = "Enter your father name" })
+        @Html.ValidationMessageFor(m => m.FatherName, "", new { @class = "text-danger" })
+    </div>
+
+
+    <div class="form-group col-md-4">
+        <label>NRC Number</label>
+        @Html.TextBoxFor(m => m.NRCNo, new { @class = "form-control", placeholder = "Enter your NRC number" })
+        @Html.ValidationMessageFor(m => m.NRCNo, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group col-md-4">
+        <label>Date Of Birth</label>
+        @Html.TextBoxFor(model => model.DateOfBirth, new { @class = "form-control", type = "date", placeholder = "Select date of birth" })
+    </div>
+
+
+    <div class="form-group col-md-4">
+        <label>Address</label>
+        @Html.TextBoxFor(m => m.Address, new { @class = "form-control", placeholder = "Enter your address" })
+        @Html.ValidationMessageFor(m => m.Address, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group col-md-4">
+        <label>Gender</label>
+        @Html.EnumDropDownListFor(model => model.Gender, htmlAttributes: new { @class = "form-control", placeholder = "Select Gender" })
+        @Html.ValidationMessageFor(model => model.Gender, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group col-md-4">
+        <label>Phone Number 1 </label>
+        @Html.TextBoxFor(m => m.PhoneNumber1, new { @class = "form-control", placeholder = "Enter Phone Number 1" })
+        @Html.ValidationMessageFor(m => m.PhoneNumber1, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group col-md-4">
+        <label>Phone Number 2 </label>
+        @Html.TextBoxFor(m => m.PhoneNumber2, new { @class = "form-control", placeholder = "Enter your name" })
+        @Html.ValidationMessageFor(m => m.PhoneNumber2, "", new { @class = "text-danger" })
+    </div>
+
+
+
+    <div class="form-group col-md-4">
+        <label>Business Type</label>
+        @Html.EnumDropDownListFor(model => model.BusinessType, htmlAttributes: new { @class = "form-control", placeholder = "Select Business Type" })
+    </div>
+
+    <div class="form-group col-md-4">
+        <label>Monthly Income (optional)</label>
+        @Html.TextBoxFor(m => m.LastName, new { @class = "form-control", placeholder = "Enter your monthly income" })
+    </div>
+
+    <div class="form-group col-md-4">
+        <label>Company Address (optional)</label>
+        @Html.TextBoxFor(m => m.CompanyAddress, new { @class = "form-control", placeholder = "Enter your company address" })
+    </div>
+
+    <div class="form-group col-md-4">
+        <label>Company Phone Number (optional)</label>
+        @Html.TextBoxFor(m => m.CompanyPhoneNumber, new { @class = "form-control", placeholder = "Enter your company phone number" })
+    </div>
+
+
+    <div class="form-group">
+        <label>Profile Picture (optional)</label>
+        @Html.TextBoxFor(m => m.ProfilePicture, new { @type = "file", @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.ProfilePicture, "", new { @class = "text-danger" })
+    </div>
+
+    <fieldset>
+        <legend>Add Credit/Debit Card</legend>
+        <label>Card Number</label>
+        <div class="form-group col-md-4">
+            @Html.TextBoxFor(m => m.CardNumber, new { @class = "form-control", placeholder = "Enter Card Number" })
+            <label>Card Number</label>
+            @Html.TextBoxFor(m => m.CardNumber, new { @class = "form-control", placeholder = "Enter Card Number" })
+            <label>Card Holder Name</label>
+            @Html.TextBoxFor(m => m.CardHolderName, new { @class = "form-control", placeholder = "Enter Card Number" })
+            <label>Expiration Date</label>
+            @Html.TextBoxFor(m => m.ExpirationDate, new { @class = "form-control", placeholder = "Enter Card Number" })
+            <label>CVV</label>
+            @Html.TextBoxFor(m => m.CVV, new { @class = "form-control", placeholder = "Enter Card Number" })
+    </fieldset>
+
+
+    <button type="submit" class="btn btn-success">Submit</button>
+
+    <button type="reset" class="btn btn-warning">Clear</button>
+}
+
+
+

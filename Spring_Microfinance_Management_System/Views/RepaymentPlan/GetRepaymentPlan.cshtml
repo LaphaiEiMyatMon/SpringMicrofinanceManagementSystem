@@ -1,0 +1,113 @@
+﻿@model Spring_Microfinance_Management_System.Models.RepaymentPlan
+@using Spring_Microfinance_Management_System.Models
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-xl-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover mb-0">
+                            <thead>
+                                <tr class="align-self-center">
+                                    <th>Repayment Time</th>
+                                    <th>Monthly Repayment Date </th>
+                                    <th>Monthly Interest Amount</th>
+                                    <th>Monthly Principal Amount</th>
+                                    <th> Monthly Total Amount</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                @foreach (var data in Model.PlanList)
+                                {
+                                    <tr>
+
+                                        <td>
+                                            @Html.DisplayFor(modelItem => data.Count)
+                                        </td>
+
+                                        <td>
+                                            @Html.DisplayFor(modelItem => data.MonthlyRepaymentDate.Date)
+                                        </td>
+
+                                        <td>
+                                            @Html.DisplayFor(modelItem => data.MonthlyInterestAmount)
+                                        </td>
+
+                                        <td>
+                                            @Html.DisplayFor(modelItem => data.MonthlyPrincipalAmount)
+                                        </td>
+
+                                        <td>
+                                            @Html.DisplayFor(modelItem => data.MonthlyTotalAmount)
+                                        </td>
+
+                                    </tr>
+                                }
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--end table-responsive-->
+                    <a href="/ProductTypeMaintenance/AddProductType" class="btn btn-primary" style="float:right">Add Product</a>
+                </div>
+              
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    body {
+        background: #f5f5f5;
+        margin-top: 140px;
+    }
+
+    .card {
+        border: none;
+        -webkit-box-shadow: 1px 0 20px rgba(96,93,175,.05);
+        box-shadow: 1px 0 20px rgba(96,93,175,.05);
+        margin-bottom: 30px;
+    }
+
+    .table th {
+        font-weight: 500;
+        color: #fff;
+    }
+
+    .table thead {
+        background-color: dodgerblue;
+    }
+
+    .table > tbody > tr > td, .table > tfoot > tr > td, .table > thead > tr > td {
+        padding: 11px 12px;
+        vertical-align: middle;
+    }
+
+
+    .thumb-sm {
+        height: 32px;
+        width: 32px;
+    }
+
+    .badge-soft-warning {
+        background-color: rgba(248,201,85,.2);
+        color: #f8c955;
+    }
+
+    .badge {
+        font-weight: 500;
+    }
+
+    .badge-soft-primary {
+        background-color: rgba(96,93,175,.2);
+        color: #605daf;
+    }
+
+    tr:nth-child(even) {
+        background-color: aliceblue;
+    }
+</style>

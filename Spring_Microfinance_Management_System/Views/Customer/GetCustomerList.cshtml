@@ -1,0 +1,176 @@
+﻿@model Spring_Microfinance_Management_System.Models.Customer
+
+@{
+    ViewBag.Title = "GetCustomerList";
+    Layout = "~/Views/Shared/_sideBar.cshtml";
+}
+
+<div class="content-wrapper">
+
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0">Customer List</h1>
+
+                </div><!-- /.col -->
+
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li>
+                            <form class="form-inline" action="/Customer/GetCustomerList" method="post">
+                                @Html.TextBoxFor(m => m.CustomerEntity.FirstName, new { @class = "form-control mr-sm-2", placeholder = "Search By Name" })
+                                
+                                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+                            </form>
+                        </li>
+                        <li></li>
+
+
+                    </ol>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+
+            <!-- Main row -->
+            <div class="row">
+
+
+            </div>
+
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="card">
+                            <div class="card-body">
+
+                                <div class="table-responsive">
+                                    <table class="table table-hover mb-0">
+                                        <thead>
+                                            <tr>
+                                                <th>Customer ID</th>
+                                                <th>First Name</th>
+                                                <th>Last Name</th>
+                                                <th>Email</th>
+                                                <th>Status</th>
+
+                                                <th width="8%">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+                                            @foreach (var data in Model.CustomerList)
+                                            {
+                                            <tr>
+
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => data.CustomerID)
+                                                </td>
+
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => data.FirstName)
+                                                </td>
+
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => data.LastName)
+                                                </td>
+
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => data.Email)
+                                                </td>
+
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => data.Status)
+                                                </td>
+
+
+
+                                                <td>
+                                                    <i class="fa fa-edit" style="color:blue"></i>
+                                                    @Html.ActionLink("Edit", "UpdateLoanApplication", new { customerID = data.CustomerID })
+
+                                                </td>
+
+
+
+
+                                            </tr>
+
+                                            }
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!--end table-responsive-->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="RegisterByAdmin" class="btn btn-primary" style="float:right">Register Customer</a>
+
+        </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+</div>
+
+
+<style>
+    body {
+        background: #f5f5f5;
+    }
+
+    .card {
+        border: none;
+        -webkit-box-shadow: 1px 0 20px rgba(96,93,175,.05);
+        box-shadow: 1px 0 20px rgba(96,93,175,.05);
+        margin-bottom: 30px;
+    }
+
+    .table th {
+        font-weight: 500;
+        color: #fff;
+    }
+
+    .table thead {
+        background-color: dodgerblue;
+    }
+
+    .table > tbody > tr > td, .table > tfoot > tr > td, .table > thead > tr > td {
+        padding: 11px 12px;
+        vertical-align: middle;
+    }
+
+
+    .thumb-sm {
+        height: 32px;
+        width: 32px;
+    }
+
+    .badge-soft-warning {
+        background-color: rgba(248,201,85,.2);
+        color: #f8c955;
+    }
+
+    .badge {
+        font-weight: 500;
+    }
+
+    .badge-soft-primary {
+        background-color: rgba(96,93,175,.2);
+        color: #605daf;
+    }
+
+    tr:nth-child(even) {
+        background-color: aliceblue;
+    }
+</style>
+

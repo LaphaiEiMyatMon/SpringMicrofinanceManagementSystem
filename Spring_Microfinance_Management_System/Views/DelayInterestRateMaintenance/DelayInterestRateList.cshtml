@@ -1,0 +1,79 @@
+﻿@model Spring_Microfinance_Management_System.Models.DelayInterestRateMaintenance
+
+@*@Html.Partial("~/Views/Shared/_Home.cshtml")
+
+    @Html.Partial("~/Views/Shared/_MenuBar.cshtml")*@
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<table class="table" style="width:60%">
+
+    <tr>
+        <th>
+            DelayInterestRateID
+        </th>
+        <th>
+            DelayInterest Rate
+        </th>
+        <th>
+            Action
+        </th>
+    </tr>
+
+    @foreach (var data in Model.DelayInterestRateList)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => data.DelayInterestRateID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => data.DelayInterestRate)
+            </td>
+
+            <td>
+                <i class="fa fa-pencil-square fa-lg" style="font-size:15px;color:green">
+                    @Html.ActionLink("Edit", "EditDelayInterestRate", new { delayInterestRateID = data.DelayInterestRateID })
+                </i>
+                <i class="fa fa-trash-o" style="font-size:15px;color:red">
+                    @Html.ActionLink("Delete", "DeleteDelayInterestRate", new { delayInterestRateID = data.DelayInterestRateID }, new { @class = "confirmation" })
+                </i>
+            </td>
+        </tr>
+    }
+</table>
+<div Class="text-mid">
+    <div class="float-left">
+        <a href="AddDelayInterestRate" class="btn btn-warning">Back</a>
+        <a href="AddDelayInterestRate" class="btn btn-success">Add New DelayInterest Rate</a>
+    </div>
+</div>
+
+<style>
+    th {
+        background-color: skyblue;
+    }
+
+    table {
+        border: 1px solid black;
+    }
+
+    tr:nth-child(odd) {
+        background-color: aliceblue;
+    }
+</style>
+
+
+@if (ViewBag.Message != null)
+{
+    <script type="text/javascript">
+            window.onload = function () {
+                alert("@ViewBag.Message");
+        };
+    </script>
+
+}
+
+<script type="text/javascript">
+    $('.confirmation').on('click', function () {
+        return confirm('Are you sure you want to Delete?');
+    });
+</script>

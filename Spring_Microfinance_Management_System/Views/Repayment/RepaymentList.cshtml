@@ -1,0 +1,181 @@
+﻿@model Spring_Microfinance_Management_System.Models.Repayment
+
+@{
+    ViewBag.Title = "RepaymentList";
+    Layout = "~/Views/Shared/_sideBar.cshtml";
+}
+
+
+
+<div class="content-wrapper">
+
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0">Repayment List</h1>
+                   
+                </div><!-- /.col -->
+               
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li>
+                            <form class="form-inline" action="/Repayment/RepaymentList" method="post">
+                                <input class="form-control mr-sm-2" id="customerID" name="customerID" type="search" placeholder="Search By Customer ID" aria-label="Search">
+                                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+                            </form>
+                        </li>
+                        <li></li>
+
+
+                    </ol>
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+
+            <!-- Main row -->
+            <div class="row">
+
+
+            </div>
+
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="card">
+                            <div class="card-body">
+
+                                <div class="table-responsive">
+                                    <table class="table table-hover mb-0">
+                                        <thead>
+                                            <tr>
+                                                <th>Loan Application ID</th>
+                                                <th>Customer ID</th>
+                                                <th>Repayment Date</th>
+                                                <th>Repayment Amount</th>
+                                                <th>Payment Method</th>
+
+                                                <th width="8%">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+                                            @foreach (var data in Model.RepaymentList)
+                                            {
+                                                <tr>
+
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => data.LoanApplicationID)
+                                                    </td>
+
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => data.CustomerID)
+                                                    </td>
+
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => data.RepaymentDate)
+                                                    </td>
+
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => data.RepaymentAmount)
+                                                    </td>
+
+                                                    <td>
+                                                        @Html.DisplayFor(modelItem => data.PaymentMethod)
+                                                    </td>
+
+
+
+
+                                                    <td>
+                                                        <i class="fa fa-edit" style="color:blue"></i>
+                                                        @Html.ActionLink("Edit", "UpdateLoanApplication", new { loanApplicationID = data.LoanApplicationID })
+
+                                                    </td>
+
+
+
+
+                                                </tr>
+
+                                            }
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!--end table-responsive-->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="RegisterRepayment" class="btn btn-primary" style="float:right">Register Repayment</a>
+
+        </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+</div>
+
+
+<style>
+    body {
+        background: #f5f5f5;
+        
+    }
+
+    .card {
+        border: none;
+        -webkit-box-shadow: 1px 0 20px rgba(96,93,175,.05);
+        box-shadow: 1px 0 20px rgba(96,93,175,.05);
+        margin-bottom: 30px;
+    }
+
+    .table th {
+        font-weight: 500;
+        color: #fff;
+    }
+
+    .table thead {
+        background-color: dodgerblue;
+    }
+
+    .table > tbody > tr > td, .table > tfoot > tr > td, .table > thead > tr > td {
+        padding: 11px 12px;
+        vertical-align: middle;
+    }
+
+
+    .thumb-sm {
+        height: 32px;
+        width: 32px;
+    }
+
+    .badge-soft-warning {
+        background-color: rgba(248,201,85,.2);
+        color: #f8c955;
+    }
+
+    .badge {
+        font-weight: 500;
+    }
+
+    .badge-soft-primary {
+        background-color: rgba(96,93,175,.2);
+        color: #605daf;
+    }
+
+    tr:nth-child(even) {
+        background-color: aliceblue;
+    }
+</style>
+
+
+
+

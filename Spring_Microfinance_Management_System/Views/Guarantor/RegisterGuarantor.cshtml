@@ -1,0 +1,495 @@
+﻿@model Spring_Microfinance_Management_System.Models.Guarantor
+
+@using Spring_Microfinance_Management_System.Common
+@using Spring_Microfinance_Management_System.Common.Const
+@using Spring_Microfinance_Management_System.Models
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html class="supernova">
+<head>
+    <script> window.alert("'Please fill guarator information otherwise loan will not be approved!!!'");</script>
+   
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="alternate" type="application/json+oembed" href="https://www.jotform.com/oembed/?format=json&amp;url=https%3A%2F%2Fform.jotform.com%2F230511359974460" title="oEmbed Form">
+    <link rel="alternate" type="text/xml+oembed" href="https://www.jotform.com/oembed/?format=xml&amp;url=https%3A%2F%2Fform.jotform.com%2F230511359974460" title="oEmbed Form">
+    <meta property="og:title" content="Loan Application Form ">
+    <meta property="og:url" content="https://form.jotform.com/230511359974460">
+    <meta property="og:description" content="Please click the link to complete this form.">
+    <meta name="slack-app-id" content="AHNMASS8M">
+    <meta property="og:image" content="https://cdn.jotfor.ms/assets/img/landing/opengraph.png" />
+    <meta property="og:image" content="https://cdn.jotfor.ms/assets/img/favicons/favicon-2021-light%402x.png" />
+    <link rel="shortcut icon" href="https://cdn.jotfor.ms/assets/img/favicons/favicon-2021-light%402x.png">
+    <script>
+        var favicon = document.querySelector('link[rel="shortcut icon"]');
+        window.isDarkMode = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        if (favicon && window.isDarkMode) {
+            favicon.href = favicon.href.replaceAll('favicon-2021-light%402x.png', 'favicon-2021-dark%402x.png');
+        }</script>
+    <link rel="canonical" href="https://form.jotform.com/230511359974460" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=1" />
+    <meta name="HandheldFriendly" content="true" />
+    <title>Loan Application Form </title>
+    @*<style type="text/css">@media print{.form-section{display:inline!important}.form-pagebreak{display:none!important}.form-section-closed{height:auto!important}.page-section{position:initial!important}}</style>*@
+    <link type="text/css" rel="stylesheet" href="https://cdn01.jotfor.ms/themes/CSS/5e6b428acc8c4e222d1beb91.css?v=3.3.39449&themeRevisionID=5f30e2a790832f3e96009402" />
+    <link type="text/css" rel="stylesheet" href="https://cdn02.jotfor.ms/css/styles/payment/payment_styles.css?3.3.39449" />
+    <link type="text/css" rel="stylesheet" href="https://cdn03.jotfor.ms/css/styles/payment/payment_feature.css?3.3.39449" />
+    <style type="text/css" id="form-designer-style">
+
+        /* Injected CSS Code */
+        /*PREFERENCES STYLE*/
+        .form-all {
+            font-family: Inter, sans-serif;
+        }
+
+            .form-all .qq-upload-button,
+            .form-all .form-submit-button,
+            .form-all .form-submit-reset,
+            .form-all .form-submit-print {
+                font-family: Inter, sans-serif;
+            }
+
+            .form-all .form-pagebreak-back-container,
+            .form-all .form-pagebreak-next-container {
+                font-family: Inter, sans-serif;
+            }
+
+        .form-header-group {
+            font-family: Inter, sans-serif;
+        }
+
+        .form-label {
+            font-family: Inter, sans-serif;
+        }
+
+            .form-label.form-label-auto {
+                display: inline-block;
+                float: left;
+                text-align: left;
+            }
+
+        .form-line {
+            margin-top: 12px 36px 12px 36px px;
+            margin-bottom: 12px 36px 12px 36px px;
+        }
+
+        .form-all {
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .form-label.form-label-left,
+        .form-label.form-label-right,
+        .form-label.form-label-left.form-label-auto,
+        .form-label.form-label-right.form-label-auto {
+            width: 230px;
+        }
+
+        .form-all {
+            font-size: 16px
+        }
+
+            .form-all .qq-upload-button,
+            .form-all .qq-upload-button,
+            .form-all .form-submit-button,
+            .form-all .form-submit-reset,
+            .form-all .form-submit-print {
+                font-size: 16px
+            }
+
+            .form-all .form-pagebreak-back-container,
+            .form-all .form-pagebreak-next-container {
+                font-size: 16px
+            }
+
+        .supernova .form-all, .form-all {
+            background-color: #fff;
+        }
+
+        .form-all {
+            color: #2C3345;
+        }
+
+        .form-header-group .form-header {
+            color: #2C3345;
+        }
+
+        .form-header-group .form-subHeader {
+            color: #2C3345;
+        }
+
+        .form-label-top,
+        .form-label-left,
+        .form-label-right,
+        .form-html,
+        .form-checkbox-item label,
+        .form-radio-item label,
+        span.FITB .qb-checkbox-label,
+        span.FITB .qb-radiobox-label,
+        span.FITB .form-radio label,
+        span.FITB .form-checkbox label,
+        [data-blotid][data-type=checkbox] [data-labelid],
+        [data-blotid][data-type=radiobox] [data-labelid],
+        span.FITB-inptCont[data-type=checkbox] label,
+        span.FITB-inptCont[data-type=radiobox] label {
+            color: #2C3345;
+        }
+
+        .form-sub-label {
+            color: #464d5f;
+        }
+
+        .supernova {
+            background-color: aliceblue;
+        }
+
+            .supernova body {
+                background: transparent;
+            }
+
+        .form-textbox,
+        .form-textarea,
+        .form-dropdown,
+        .form-radio-other-input,
+        .form-checkbox-other-input,
+        .form-captcha input,
+        .form-spinner input {
+            background-color: #fff;
+        }
+
+        .supernova {
+            background-image: none;
+        }
+
+        #stage {
+            background-image: none;
+        }
+
+        .form-all {
+            background-image: none;
+        }
+
+        .ie-8 .form-all:before {
+            display: none;
+        }
+
+        .ie-8 {
+            margin-top: auto;
+            margin-top: initial;
+        }
+
+        /*PREFERENCES STYLE*/ /*__INSPECT_SEPERATOR__*/
+
+        .form-header-group.header-small {
+            border: 0;
+            border-top: 1px solid #ededf1;
+        }
+
+        li[data-type="control_image"] {
+            margin-top: 40px;
+        }
+
+        .form-header-group.header-small h3 {
+            text-transform: uppercase;
+            font-size: 24px;
+            font-weight: normal;
+            text-align: left;
+        }
+
+        .form-header-group.header-small {
+            padding: 20px 52px !important;
+            border-radius: 6px 6px 0 0;
+            border-top: 1px solid aliceblue;
+            margin: 0 -38px;
+        }
+
+        .supernova {
+            background-image: linear-gradient(#5361E7, #8790e7);
+            background-attachment: fixed;
+        }
+
+        .form-matrix-table tr:first-child th:first-child {
+            border-bottom: 1px solid #c3cad8 !important;
+        }
+
+        label .editor-container.editorHasText,
+        li[data-type="control_checkbox"] .form-label.form-label-top {
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        body {
+            font-family: Inter,sans-serif;
+            font-size: 16px;
+            background-color: aliceblue;
+            color: #2c3345
+        }
+
+
+        .form-submit-button {
+            padding-left: 18px;
+            padding-right: 18px;
+        }
+        /* Injected CSS Code */
+    </style>
+    <script src="https://cdn01.jotfor.ms/static/prototype.forms.js?3.3.39449" type="text/javascript"></script>
+    <script src="https://cdn02.jotfor.ms/static/jotform.forms.js?3.3.39449" type="text/javascript"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/punycode/1.4.1/punycode.js"></script>
+    <script src="https://cdn03.jotfor.ms/js/vendor/jquery-1.8.0.min.js?v=3.3.39449" type="text/javascript"></script>
+    <script defer src="https://cdn01.jotfor.ms/js/vendor/maskedinput.min.js?v=3.3.39449" type="text/javascript"></script>
+    <script defer src="https://cdn02.jotfor.ms/js/vendor/jquery.maskedinput.min.js?v=3.3.39449" type="text/javascript"></script>
+    <script src="https://js.jotform.com/vendor/postMessage.js?3.3.39449" type="text/javascript"></script>
+    <script src="https://js.jotform.com/WidgetsServer.js?v=1676963397437" type="text/javascript"></script>
+    <script src="https://cdn03.jotfor.ms/js/vendor/math-processor.js?v=3.3.39449" type="text/javascript"></script>
+    <script type="text/javascript">
+        JotForm.newDefaultTheme = true;
+        JotForm.extendsNewTheme = false;
+        JotForm.singleProduct = false;
+        JotForm.newPaymentUIForNewCreatedForms = false;
+        JotForm.newPaymentUI = true;
+
+        JotForm.setCalculations([{ "decimalPlaces": "2", "equation": "$[|*|commaSeparate|*|({87})]", "ignoreHiddenFields": "0", "insertAsText": "0", "newCalculationType": "1", "operands": "87", "readOnly": "0", "replaceText": "", "resultField": "87", "showBeforeInput": "0", "showEmptyDecimals": "0", "useCommasForDecimals": "0" }]);
+        JotForm.init(function () {
+            /*INIT-START*/
+            setTimeout(function () {
+                $('input_78').hint('ex: myname@example.com');
+            }, 20);
+            JotForm.setPhoneMaskingValidator('input_72_full', '(###) ###-####');
+            if (window.JotForm && JotForm.accessible) $('input_30').setAttribute('tabindex', 0);
+            setTimeout(function () {
+                $('input_80').hint('ex: 1500');
+            }, 20);
+            setTimeout(function () {
+                $('input_81').hint('ex: 0 for no rent/mortgage');
+            }, 20);
+            if (window.JotForm && JotForm.accessible) $('input_40').setAttribute('tabindex', 0);
+            if (window.JotForm && JotForm.accessible) $('input_44').setAttribute('tabindex', 0);
+            /*INIT-END*/
+        });
+
+        JotForm.prepareCalculationsOnTheFly([null, null, null, null, null, null, { "name": "maritalStatus", "qid": "6", "text": "Marital Status:", "type": "control_radio" }, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, { "name": "occupation", "qid": "30", "text": "Occupation", "type": "control_textbox" }, null, null, null, null, null, null, null, null, null, { "name": "downPayment40", "qid": "40", "text": "Down Payment Amount", "type": "control_textbox" }, null, null, null, { "name": "comments44", "qid": "44", "text": "Comments", "type": "control_textarea" }, { "name": "submit", "qid": "45", "text": "Send Application Now", "type": "control_button" }, null, null, null, null, { "name": "clickTo50", "qid": "50", "text": "Employment Information", "type": "control_head" }, { "name": "iAuthorize51", "qid": "51", "text": "I authorize prospective Credit Grantors\u002FLending\u002FLeasing Companies to obtain personal and credit information about me from my employer and credit bureau, or credit reporting agency, any person who has or may have any financial dealing with me, or from any references I have provided. This information, as well as that provided by me in the application, will be referred to in connection with this lease and any other relationships we may establish from time to time. Any personal and credit information obtained may be disclosed from time to time to other lenders, credit bureaus or other credit reporting agencies.", "type": "control_checkbox" }, { "name": "iHereby", "qid": "52", "text": "I hereby agree that the information given is true, accurate and complete as of the date of this application submission.", "type": "control_checkbox" }, null, null, null, null, null, null, null, null, { "name": "name", "qid": "61", "text": "Name", "type": "control_fullname" }, { "name": "birthDate62", "qid": "62", "text": "Birth Date", "type": "control_birthdate" }, null, null, null, null, null, null, null, null, null, { "name": "phone", "qid": "72", "text": "Phone", "type": "control_phone" }, null, { "name": "clickTo", "qid": "74", "text": "Loan Application Form", "type": "control_head" }, { "name": "clickTo75", "qid": "75", "text": "Contact Information", "type": "control_head" }, { "name": "address76", "qid": "76", "text": "Address", "type": "control_address" }, { "name": "howLong", "qid": "77", "text": "How long have you lived in your given address?", "type": "control_radio" }, { "name": "email78", "qid": "78", "subLabel": "example@example.com", "text": "E-mail", "type": "control_email" }, { "name": "yearsOf", "qid": "79", "text": "Years of experience", "type": "control_radio" }, { "name": "grossMonthly80", "qid": "80", "text": "Gross monthly income", "type": "control_number" }, { "name": "monthlyRentmortgage", "qid": "81", "text": "Monthly rent\u002Fmortgage", "type": "control_number" }, { "name": "presentEmployer82", "qid": "82", "text": "Present Employer", "type": "control_fullname" }, { "name": "bankReferences", "qid": "83", "text": "Bank References", "type": "control_head" }, { "name": "typeA", "qid": "84", "text": "Please List Here", "type": "control_widget" }, { "name": "consent", "qid": "85", "text": "Consent", "type": "control_head" }, null, { "name": "desiredLoan87", "qid": "87", "text": "Desired Loan Amount $", "type": "control_calculation" }, { "name": "annualIncome", "qid": "88", "text": "Annual Income $", "type": "control_calculation" }, { "name": "loanWill", "qid": "89", "text": "Loan will be used for", "type": "control_radio" }, { "name": "asset2054402x63a055c40e63f617977793", "qid": "90", "text": "Asset%2054%402x.63a055c40e63f6.17977793", "type": "control_image" }, { "name": "input91", "qid": "91", "text": "\nACME GLOBAL Investment Company\n123 Maple Street, Houston, TX, 77002\n\nexample@example.com\nwww.example.com\n(123) 1234567\n\n", "type": "control_text" }]);
+        setTimeout(function () {
+            JotForm.paymentExtrasOnTheFly([null, null, null, null, null, null, { "name": "maritalStatus", "qid": "6", "text": "Marital Status:", "type": "control_radio" }, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, { "name": "occupation", "qid": "30", "text": "Occupation", "type": "control_textbox" }, null, null, null, null, null, null, null, null, null, { "name": "downPayment40", "qid": "40", "text": "Down Payment Amount", "type": "control_textbox" }, null, null, null, { "name": "comments44", "qid": "44", "text": "Comments", "type": "control_textarea" }, { "name": "submit", "qid": "45", "text": "Send Application Now", "type": "control_button" }, null, null, null, null, { "name": "clickTo50", "qid": "50", "text": "Employment Information", "type": "control_head" }, { "name": "iAuthorize51", "qid": "51", "text": "I authorize prospective Credit Grantors\u002FLending\u002FLeasing Companies to obtain personal and credit information about me from my employer and credit bureau, or credit reporting agency, any person who has or may have any financial dealing with me, or from any references I have provided. This information, as well as that provided by me in the application, will be referred to in connection with this lease and any other relationships we may establish from time to time. Any personal and credit information obtained may be disclosed from time to time to other lenders, credit bureaus or other credit reporting agencies.", "type": "control_checkbox" }, { "name": "iHereby", "qid": "52", "text": "I hereby agree that the information given is true, accurate and complete as of the date of this application submission.", "type": "control_checkbox" }, null, null, null, null, null, null, null, null, { "name": "name", "qid": "61", "text": "Name", "type": "control_fullname" }, { "name": "birthDate62", "qid": "62", "text": "Birth Date", "type": "control_birthdate" }, null, null, null, null, null, null, null, null, null, { "name": "phone", "qid": "72", "text": "Phone", "type": "control_phone" }, null, { "name": "clickTo", "qid": "74", "text": "Loan Application Form", "type": "control_head" }, { "name": "clickTo75", "qid": "75", "text": "Contact Information", "type": "control_head" }, { "name": "address76", "qid": "76", "text": "Address", "type": "control_address" }, { "name": "howLong", "qid": "77", "text": "How long have you lived in your given address?", "type": "control_radio" }, { "name": "email78", "qid": "78", "subLabel": "example@example.com", "text": "E-mail", "type": "control_email" }, { "name": "yearsOf", "qid": "79", "text": "Years of experience", "type": "control_radio" }, { "name": "grossMonthly80", "qid": "80", "text": "Gross monthly income", "type": "control_number" }, { "name": "monthlyRentmortgage", "qid": "81", "text": "Monthly rent\u002Fmortgage", "type": "control_number" }, { "name": "presentEmployer82", "qid": "82", "text": "Present Employer", "type": "control_fullname" }, { "name": "bankReferences", "qid": "83", "text": "Bank References", "type": "control_head" }, { "name": "typeA", "qid": "84", "text": "Please List Here", "type": "control_widget" }, { "name": "consent", "qid": "85", "text": "Consent", "type": "control_head" }, null, { "name": "desiredLoan87", "qid": "87", "text": "Desired Loan Amount $", "type": "control_calculation" }, { "name": "annualIncome", "qid": "88", "text": "Annual Income $", "type": "control_calculation" }, { "name": "loanWill", "qid": "89", "text": "Loan will be used for", "type": "control_radio" }, { "name": "asset2054402x63a055c40e63f617977793", "qid": "90", "text": "Asset%2054%402x.63a055c40e63f6.17977793", "type": "control_image" }, { "name": "input91", "qid": "91", "text": "\nACME GLOBAL Investment Company\n123 Maple Street, Houston, TX, 77002\n\nexample@example.com\nwww.example.com\n(123) 1234567\n\n", "type": "control_text" }]);
+        }, 20);</script>
+</head>
+<body>
+    <form class="jotform-form" action="/Guarantor/RegisterGuarantor" method="post" name="form_230511359974460" id="230511359974460" accept-charset="utf-8" autocomplete="on">
+        <input type="hidden" name="formID" value="230511359974460" /><input type="hidden" id="JWTContainer" value="" /><input type="hidden" id="cardinalOrderNumber" value="" />
+        <div role="main" class="form-all">
+            <style>
+
+                .form-all:before {
+                    background: none;
+                }
+            </style>
+            <ul class="form-section page-section">
+
+
+                <li id="cid_74" class="form-input-wide" data-type="control_head">
+                    <div class="form-header-group  header-small">
+                        <div class="header-text httac htvam">
+                            <p class="h1 fw-bold mb-5 mx-1 mx-md-4 mt-4" style="color:#0d6efd">Please Fill Guarantor Information</p>
+                        </div>
+                    </div>
+                </li>
+
+
+
+                <li id="cid_75" class="form-input-wide" data-type="control_head">
+                    <div class="form-header-group  header-small">
+                        <div class="header-text httal htvam">
+                            <h3 id="header_75" class="form-header" data-component="header">Personal Detail</h3>
+                        </div>
+                    </div>
+                </li>
+
+
+                <li class="form-line form-line-column form-col-1" data-type="control_email" id="id_78">
+                    <label class="form-label form-label-top form-label-auto" id="label_78" for="input_78"> Guarantor Name </label>
+                    <div id="cid_78" class="form-input-wide" data-layout="half">
+                        <span class="form-sub-label-container" style="vertical-align:top">
+                            @Html.TextBoxFor(m => m.GuarantorEntity.Name, new { @class = "form-control", placeholder = "Enter Guarantor Name" })
+                            @Html.ValidationMessageFor(m => m.GuarantorEntity.Name, "", new { @class = "text-danger" })
+                        </span>
+                    </div>
+                </li>
+                <li class="form-line form-line-column form-col-1" data-type="control_email" id="id_78">
+                    <label class="form-label form-label-top form-label-auto" id="label_78" for="input_78"> Relation </label>
+                    <div id="cid_78" class="form-input-wide" data-layout="half">
+                        <span class="form-sub-label-container" style="vertical-align:top">
+                            @Html.TextBoxFor(m => m.GuarantorEntity.Relation, new { @class = "form-control", placeholder = "Enter Relation" })
+                            @Html.ValidationMessageFor(m => m.GuarantorEntity.Relation, "", new { @class = "text-danger" })
+                        </span>
+                    </div>
+                </li>
+                <li class="form-line form-line-column form-col-1" data-type="control_email" id="id_78">
+                    <label class="form-label form-label-top form-label-auto" id="label_78" for="input_78"> Email </label>
+                    <div id="cid_78" class="form-input-wide" data-layout="half">
+                        <span class="form-sub-label-container" style="vertical-align:top">
+                            @Html.TextBoxFor(m => m.GuarantorEntity.Email, new { @class = "form-control", placeholder = "Enter Email" })
+                            @Html.ValidationMessageFor(m => m.GuarantorEntity.Email, "", new { @class = "text-danger" })
+                        </span>
+                    </div>
+                </li>
+
+                <li class="form-line form-line-column form-col-1" data-type="control_email" id="id_78">
+                    <label class="form-label form-label-top form-label-auto" id="label_78" for="input_78"> NRC Number </label>
+                    <div id="cid_78" class="form-input-wide" data-layout="half">
+                        <span class="form-sub-label-container" style="vertical-align:top">
+                            @Html.TextBoxFor(m => m.GuarantorEntity.NRCNo, new { @class = "form-control", placeholder = "Enter NRC Number" })
+                            @Html.ValidationMessageFor(m => m.GuarantorEntity.NRCNo, "", new { @class = "text-danger" })
+                        </span>
+                    </div>
+                </li>
+
+                <li class="form-line form-line-column form-col-1" data-type="control_email" id="id_78">
+                    <label class="form-label form-label-top form-label-auto" id="label_78" for="input_78"> Phone Number  </label>
+                    <div id="cid_78" class="form-input-wide" data-layout="half">
+                        <span class="form-sub-label-container" style="vertical-align:top">
+                            @Html.TextBoxFor(m => m.GuarantorEntity.PhNo, new { @class = "form-control", placeholder = "09-00000000" })
+                            @Html.ValidationMessageFor(m => m.GuarantorEntity.PhNo, "", new { @class = "text-danger" })
+                        </span>
+                    </div>
+                </li>
+
+
+                <li class="form-line form-line-column form-col-1" data-type="control_email" id="id_78">
+                    <label class="form-label form-label-top form-label-auto" id="label_78" for="input_78">Date Of Birth </label>
+                    <div id="cid_78" class="form-input-wide" data-layout="half">
+                        <span class="form-sub-label-container" style="vertical-align:top">
+                            @Html.TextBoxFor(model => model.GuarantorEntity.DateOfBirth, new { @class = "form-control", type = "date", placeholder = "Select date of birth" })
+                            @Html.ValidationMessageFor(m => m.GuarantorEntity.DateOfBirth, "", new { @class = "text-danger" })
+                        </span>
+                    </div>
+                </li>
+                <li class="form-line form-line-column form-col-1" data-type="control_email" id="id_78">
+                    <label class="form-label form-label-top form-label-auto" id="label_78" for="input_78"> Gender </label>
+                    <div id="cid_78" class="form-input-wide" data-layout="half">
+                        <span class="form-sub-label-container" style="vertical-align:top">
+
+                            @Html.DropDownListFor(model => model.GuarantorEntity.Gender, EnumHelper.GetSelectList(typeof(CusGender)), "Select Gender", new { @class = "form-control" })
+
+                            @Html.ValidationMessageFor(model => model.GuarantorEntity.Gender, "", new { @class = "text-danger" })
+                        </span>
+                    </div>
+                </li>
+
+
+                <li class="form-line form-line-column form-col-1" data-type="control_email" id="id_78">
+                    <label class="form-label form-label-top form-label-auto" id="label_78" for="input_78">Profile Picture </label>
+                    <div id="cid_78" class="form-input-wide" data-layout="half">
+                        <span class="form-sub-label-container" style="vertical-align:top">
+                            @Html.TextBoxFor(model => model.GuarantorEntity.ProfilePicture, new { @class = "form-control", type = "file", placeholder = "Select date of birth" })
+                            @Html.ValidationMessageFor(m => m.GuarantorEntity.ProfilePicture, "", new { @class = "text-danger" })
+                        </span>
+                    </div>
+                </li>
+
+
+
+                <li class="form-line" data-type="control_address" id="id_76">
+                    <label class="form-label form-label-top" id="label_76" for="input_76_addr_line1"> Address </label>
+                    <div id="cid_76" class="form-input-wide" data-layout="full">
+                        <div summary="" class="form-address-table jsTest-addressField">
+                            <div class="form-address-line-wrapper jsTest-address-line-wrapperField">
+                                <span class="form-address-line form-address-street-line jsTest-address-lineField">
+                                    <span class="form-sub-label-container" style="vertical-align:top">
+                                        @Html.TextBoxFor(m => m.GuarantorEntity.Address, new { @class = "form-textbox form-address-line", placeholder = "Enter Address" })
+                                        @Html.ValidationMessageFor(m => m.GuarantorEntity.Address, "", new { @class = "text-danger" })
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+
+
+
+
+                <li id="cid_50" class="form-input-wide" data-type="control_head">
+                    <div class="form-header-group  header-small">
+                        <div class="header-text httal htvam">
+                            <h3 id="header_50" class="form-header" data-component="header">Additional Requirement</h3>
+                        </div>
+                    </div>
+                </li>
+
+
+                <li class="form-line form-line-column form-col-1" data-type="control_fullname" id="id_82">
+                    <label class="form-label form-label-top form-label-auto" id="label_82" for="first_82">Card Number</label>
+                    <div id="cid_82" class="form-input-wide" data-layout="full">
+                        <div data-wrapper-react="true">
+                            <span class="form-sub-label-container" style="vertical-align:top" data-input-type="first">
+                                @Html.TextBoxFor(m => m.GuarantorEntity.CardNumber, new { @class = "form-control", placeholder = "Enter Card Number" })
+                            </span>
+                        </div>
+
+
+                    </div>
+                </li>
+                <li class="form-line form-line-column form-col-2" data-type="control_textbox" id="id_30">
+                    <label class="form-label form-label-top form-label-auto" id="label_30" for="input_30">Card Holder Name</label>
+                    <div id="cid_30" class="form-input-wide" data-layout="half">
+                        @Html.TextBoxFor(m => m.GuarantorEntity.CardHolderName, new { @class = "form-control", placeholder = "Enter Card Holder Name" })
+                    </div>
+                </li>
+
+                <li class="form-line form-line-column form-col-1" data-type="control_number" id="id_80">
+                    <label class="form-label form-label-top form-label-auto" id="label_80" for="input_80">Expiration </label>
+                    <div id="cid_80" class="form-input-wide" data-layout="half">
+                        @Html.TextBoxFor(m => m.GuarantorEntity.ExpirationDate, new { @class = "form-control", placeholder = "MM/YY" })
+                    </div>
+                </li>
+                <li class="form-line form-line-column form-col-2" data-type="control_number" id="id_81">
+                    <label class="form-label form-label-top form-label-auto" id="label_81" for="input_81"> CVV</label>
+                    <div id="cid_81" class="form-input-wide" data-layout="half">
+                        @Html.TextBoxFor(m => m.GuarantorEntity.CVV, new { @class = "form-control", placeholder = "CVV" })
+                    </div>
+                </li>
+
+
+
+                <li id="cid_85" class="form-input-wide" data-type="control_head">
+                    <div class="form-header-group  header-small">
+                        <div class="header-text httal htvam">
+                            <h3 id="header_85" class="form-header" data-component="header">Consent</h3>
+                        </div>
+                    </div>
+                </li>
+                <li class="form-line" data-type="control_checkbox" id="id_51">
+                    <label class="form-label form-label-top" id="label_51" for="input_51"> I authorize prospective Credit Grantors/Lending/Leasing Companies to obtain personal and credit information about me from my employer and credit bureau, or credit reporting agency, any person who has or may have any financial dealing with me, or from any references I have provided. This information, as well as that provided by me in the application, will be referred to in connection with this lease and any other relationships we may establish from time to time. Any personal and credit information obtained may be disclosed from time to time to other lenders, credit bureaus or other credit reporting agencies. </label>
+                    <div id="cid_51" class="form-input-wide" data-layout="full">
+                        <div class="form-single-column" role="group" aria-labelledby="label_51" data-component="checkbox"><span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span><input type="checkbox" aria-describedby="label_51" class="form-checkbox" id="input_51_0" name="q51_iAuthorize51[]" value="YES" /><label id="label_input_51_0" for="input_51_0">YES</label></span></div>
+                    </div>
+                </li>
+                <li class="form-line" data-type="control_checkbox" id="id_52">
+                    <label class="form-label form-label-top" id="label_52" for="input_52"> I hereby agree that the information given is true, accurate and complete as of the date of this application submission. </label>
+                    <div id="cid_52" class="form-input-wide" data-layout="full">
+                        <div class="form-single-column" role="group" aria-labelledby="label_52" data-component="checkbox"><span class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span><input type="checkbox" aria-describedby="label_52" class="form-checkbox" id="input_52_0" name="q52_iHereby[]" value="YES" /><label id="label_input_52_0" for="input_52_0">YES</label></span></div>
+                    </div>
+                </li>
+
+
+
+                <li class="form-line" data-type="control_button" id="id_45">
+                    <div id="cid_45" class="form-input-wide" data-layout="full">
+                        <div data-align="center" class="form-buttons-wrapper form-buttons-center   jsTest-button-wrapperField">
+                            <button class="form-submit-button  jf-form-buttons jsTest-submitField">Back</button>
+                            <button id="input_45" type="submit" class="form-submit-button submit-button jf-form-buttons jsTest-submitField" data-component="button" data-content="">Submit</button>
+
+
+
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+
+    </form>
+</body>
+</html>
+
+
+
